@@ -1,13 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import { Text, View } from 'react-native';
+import { Stack } from 'expo-router';
 
 
-export default function App() {
+const RootLayout = () => {
   return (
-    <View className="flex-1 items-center justify-center  bg-blue-400">
-      <Text className="text-3xl">My Yoga App</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Stack>
+      <Stack.Screen name='index' options={ {headerShown:false} }/>
+      <Stack.Screen name='profile' />
+
+
+
+    </Stack>
   );
 }
+
+export default RootLayout
 
